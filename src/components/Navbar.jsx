@@ -2,10 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { useState } from "react";
-import Navlink from "./Navlink";
+import React, { useState, useRef } from "react";
 import { motion } from "framer-motion";
+import Navlink from "./Navlink";
 
 const Navbar = () => {
   const links = [
@@ -129,14 +128,21 @@ const Navbar = () => {
           ></motion.div>
         </button>
         {/* list */}
+        {/* list */}
         <div className="">
           {open && (
             <motion.div
               variants={listVariants}
               initial="closed"
               animate="open"
-              className="absolute top-0 left-0 w-full h-full bg-black text-white flex items-center justify-center flex-col gap-8 text-3xl"
+              className="absolute top-0 left-0 w-full h-full bg-black text-white flex items-center justify-center flex-col gap-8 text-3xl z-50"
             >
+              <button
+                className="absolute top-4 right-4 text-white text-8xl z-50"
+                onClick={() => setOpen(false)}
+              >
+                &times;
+              </button>
               {links.map((link) => (
                 <motion.div
                   variants={listItemVariants}

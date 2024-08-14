@@ -67,6 +67,7 @@ const portfolio = () => {
             alt=""
             width={250}
             height={0}
+            className="z-0"
           />
           My Works
           {/* SCROLL SVG */}

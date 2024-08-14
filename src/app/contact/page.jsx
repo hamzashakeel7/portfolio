@@ -47,7 +47,7 @@ const contact = () => {
     >
       <div className="h-full flex flex-col lg:flex-row  px-4 sm:px-8 md:px-12 lg:px-20">
         {/* TEXT CONTAINER */}
-        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-6xl">
+        <div className="h-1/2 lg:h-full lg:w-1/2 flex items-center justify-center text-3xl md:text-6xl lg:text-8xl mb-12">
           <div className="">
             {text.split("").map((letter, index) => (
               <motion.span
@@ -70,13 +70,13 @@ const contact = () => {
         <form
           onSubmit={sendEmail}
           ref={form}
-          className="h-1/2 lg:h-full lg:w-1/2 bg-red-50 text-xl rounded-xl flex flex-col gap-8 justify-center p-24"
+          className="h-full lg:h-full lg:w-1/2 w-full bg-red-50 text-xl rounded-xl flex flex-col gap-8 justify-center p-24"
         >
           <span>Dear Durrani,</span>
           <textarea
             name="user_message"
             rows={6}
-            className="bg-transparent border-b-2 border-b-black outline-none resize-none"
+            className="bg-transparent border-b-2 border-b-black outline-none resize-none w-full"
           />
           <span>My mail address is: </span>
           <input
